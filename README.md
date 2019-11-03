@@ -1,6 +1,6 @@
 First change
 Second
-#Tama on otsikko#
+### Tama on otsikko
 
 tama on tavallista tekstia
 *tama on kursivoitua tekstia*
