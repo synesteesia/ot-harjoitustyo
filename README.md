@@ -1,5 +1,3 @@
-First change
-Second
 ### Tama on otsikko
 
 tama on tavallista tekstia
