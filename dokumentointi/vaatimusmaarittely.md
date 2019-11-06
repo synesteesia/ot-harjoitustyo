@@ -10,7 +10,7 @@ Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjärooli eli normaali kä
 
 ## Käyttöliittymäluonnos
 
-<img src="https://raw.githubusercontent.com/mluukkai/OtmTodoApp/master/dokumentaatio/kuvat/v-1.png" width="750">
+<img src="https://raw.githubusercontent.com/synesteesia/ot-harjoitustyo/master/dokumentointi/Kuvat/20191106_163624.jpg" width="750">
 
 ## Perusversion tarjoama toiminnallisuus
 
