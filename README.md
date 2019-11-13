@@ -1,8 +1,11 @@
 ### Soundboard sovellus
 
 **Testaus**
+
 suoritetaan komennoilla:
+
 mvn test
+
 mvn jacoco:report
 
 **Dokumentaatio**
