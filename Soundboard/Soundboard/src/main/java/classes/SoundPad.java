@@ -47,7 +47,7 @@ public class SoundPad {
     
     
 
-    public void playSound() {
+    public boolean playSound() {
         //use this buttons fileName and play it
 
         try {
@@ -63,9 +63,11 @@ public class SoundPad {
             clip = (Clip) AudioSystem.getLine(info);
             clip.open(stream);
             clip.start();
+            return true;
         } catch (Exception e) {
             System.out.println("Error playing file.");
             e.printStackTrace();
+            return false;
         }
     }
 
