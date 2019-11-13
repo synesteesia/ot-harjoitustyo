@@ -6,21 +6,25 @@ import java.util.Collections;
 
 public class Board {
 
-    private ArrayList<Button> buttonList;
+    private ArrayList<SoundPad> buttonList;
 
     public Board() {
-        ArrayList<Button> buttonList = new ArrayList();
+        this.buttonList = new ArrayList<SoundPad>();
 
     }
 
-    public void createButton(String fileName) {
+    public void createSoundPad(String fileName) {
         //create a button and add it to the buttons list
-        Button uusiNappi = new Button(fileName, this.buttonList.size() + 1);
+        SoundPad uusiNappi = new SoundPad(fileName, this.buttonList.size() + 1);
         this.buttonList.add(uusiNappi);
 
     }
+    
+    public void useSoundPad(int padNumber){
+        this.buttonList.get(padNumber - 1).playSound();
+    }
 
-    public void deleteButton(int buttonNumber) {
+    public void deleteSoundPad(int buttonNumber) {
         //find button by its number and delete it, then update all buttonNumbers
         for (int i = 0; i < this.buttonList.size(); i++) {
             if (buttonNumber == this.buttonList.get(i).getButtonNumber()) {
@@ -34,7 +38,7 @@ public class Board {
 
     }
 
-    public void renameButton(int buttonNumber, String newName) {
+    public void renameSoundPad(int buttonNumber, String newName) {
         //find button by its number and replace its name with new String
         for (int i = 0; i < this.buttonList.size(); i++) {
             if (buttonNumber == (this.buttonList.get(i).getButtonNumber())) {
@@ -58,13 +62,13 @@ public class Board {
 
     }
 
-    public void cloneButton(int buttonNumber) {
+    public void cloneSoundPad(int buttonNumber) {
         //find button by its number, create new button with same file path
         //copy original buttons name to the new button
         //add new button to the list
         for (int i = 0; i < this.buttonList.size(); i++) {
             if (buttonNumber == (this.buttonList.get(i).getButtonNumber())) {
-                Button uusiNappi = new Button(this.buttonList.get(i).getFilename(), this.buttonList.size() + 1);
+                SoundPad uusiNappi = new SoundPad(this.buttonList.get(i).getFilename(), this.buttonList.size() + 1);
                 uusiNappi.setButtonName(this.buttonList.get(i).getButtonName());
                 this.buttonList.add(uusiNappi);
 
@@ -73,7 +77,7 @@ public class Board {
 
     }
 
-    public void swapButtons(int buttonNumber, int swapNumber) {
+    public void swapSoundPads(int buttonNumber, int swapNumber) {
         Collections.swap(this.buttonList, buttonNumber, swapNumber);
 
     }

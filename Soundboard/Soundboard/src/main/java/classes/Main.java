@@ -5,7 +5,6 @@ package classes;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -18,28 +17,32 @@ import javafx.stage.Stage;
  *
  * @author mikko
  */
-public class Main extends Application {
+public class Main extends Application implements EventHandler<ActionEvent> {
     
+    Board testboard = new Board();
+
     @Override
     public void start(Stage primaryStage) {
         Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
+        btn.setText("Push for sound");
+        testboard.createSoundPad("test.wav");
+        btn.setOnAction(this);
         
+
         StackPane root = new StackPane();
         root.getChildren().add(btn);
-        
+
         Scene scene = new Scene(root, 300, 250);
-        
-        primaryStage.setTitle("Hello World!");
+
+        primaryStage.setTitle("Test Board");
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    @Override
+    public void handle(ActionEvent event) {
+        testboard.useSoundPad(1);
+        
     }
 
     /**
@@ -48,5 +51,4 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
 }

@@ -9,13 +9,13 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
 
 
-public class Button {
+public class SoundPad {
 
     private String fileName;
     private String buttonName;
     private int buttonNumber;
 
-    public Button(String filename, int buttonNumber) {
+    public SoundPad(String filename, int buttonNumber) {
         this.fileName = filename;
         this.buttonName = filename;
         this.buttonNumber = buttonNumber;
