@@ -49,7 +49,16 @@ public class Main extends Application implements EventHandler<ActionEvent> {
         primaryStage.setScene(scene);
 
         primaryStage.show();
-        testboard.replaceFile(1, "test.wav");
+        testboard.replaceFile(1, "Clap1.wav");
+        testboard.replaceFile(2, "Clap2.wav");
+        testboard.replaceFile(3, "Hat1.wav");
+        testboard.replaceFile(4, "Hat2.wav");
+        testboard.replaceFile(5, "Kick1.wav");
+        testboard.replaceFile(6, "Kick2.wav");
+        testboard.replaceFile(7, "Perc1.wav");
+        testboard.replaceFile(8, "Snare1.wav");
+        testboard.replaceFile(9, "Snare2.wav");
+
         
     }
 
