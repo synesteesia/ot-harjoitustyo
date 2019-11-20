@@ -11,16 +11,24 @@ public class Board {
     public Board() {
         this.buttonList = new ArrayList<SoundPad>();
 
+
+    }
+    
+    public int getNumberOfButtons(){
+        return this.buttonList.size();
     }
 
     public void createSoundPad(String fileName) {
         //create a button and add it to the buttons list
-        SoundPad uusiNappi = new SoundPad(fileName, this.buttonList.size() + 1);
-        this.buttonList.add(uusiNappi);
+        SoundPad newSoundPad = new SoundPad(fileName, this.buttonList.size() + 1);
+        this.buttonList.add(newSoundPad);
 
     }
     
-    public void useSoundPad(int padNumber){
+
+    
+    public void useSoundPad(String padNumberString){
+        int padNumber = Integer.parseInt(padNumberString);
         this.buttonList.get(padNumber - 1).playSound();
     }
 
@@ -56,7 +64,7 @@ public class Board {
             if (buttonNumber == (this.buttonList.get(i).getButtonNumber())) {
                 this.buttonList.get(i).setFilename(newFile);
                 this.buttonList.get(i).setButtonName(newFile);
-
+                return;
             }
         }
 
@@ -76,7 +84,7 @@ public class Board {
         }
 
     }
-
+    //swap places of two buttons in the list
     public void swapSoundPads(int buttonNumber, int swapNumber) {
         Collections.swap(this.buttonList, buttonNumber, swapNumber);
 

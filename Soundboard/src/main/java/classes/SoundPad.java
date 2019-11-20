@@ -49,6 +49,11 @@ public class SoundPad {
 
     public boolean playSound() {
         //use this buttons fileName and play it
+        
+        if(this.fileName.equals("")){
+            
+            return true;
+        }
 
         try {
             File audioFile = new File(this.fileName);
