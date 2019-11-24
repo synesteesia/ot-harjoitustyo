@@ -1,6 +1,8 @@
-package classes;
+package soundboard.ui;
 
 
+import soundboard.logic.Board;
+import soundboard.logic.SoundPad;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -57,12 +59,14 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
+        //play the sound assigned to a pad on a click
         Button x = (Button) event.getSource();
         testboard.useSoundPad(x.getId());
 
     }
 
     public ImageView createBackround() {
+        //create UI backround picture
         ImageView iv = new ImageView();
         Image backround = new Image("file:UI.png");
         iv.setImage(backround);
@@ -75,6 +79,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
     public Button createTemplateButton() {
         //create picture of a button for UI
         //set position depending on int X and Y value
+        //set click action
         SoundPad newSoundPad = testboard.createSoundPad("");
 
         Image buttonImage = new Image("file:UIbutton1.png");

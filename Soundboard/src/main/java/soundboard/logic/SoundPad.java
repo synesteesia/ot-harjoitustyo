@@ -1,4 +1,4 @@
-package classes;
+package soundboard.logic;
 
 
 import java.io.File;
@@ -11,6 +11,7 @@ import javax.sound.sampled.DataLine;
 
 public class SoundPad {
 
+    private static final String SOUND_PLAY_ERROR = "Error playing file.";
     private String fileName;
     private String soundPadName;
     private int soundPadNumber;
@@ -50,27 +51,23 @@ public class SoundPad {
     public boolean playSound() {
         //use this buttons fileName and play it
         
-        if(this.fileName.equals("")){
+        if (this.fileName.equals("")) {
             
             return true;
         }
 
         try {
             File audioFile = new File(this.fileName);
-            AudioInputStream stream;
-            AudioFormat format;
-            DataLine.Info info;
-            Clip clip;
+            AudioInputStream stream = AudioSystem.getAudioInputStream(audioFile);
+            AudioFormat format = stream.getFormat();
+            DataLine.Info info = new DataLine.Info(Clip.class, format);
+            Clip clip = (Clip) AudioSystem.getLine(info);
 
-            stream = AudioSystem.getAudioInputStream(audioFile);
-            format = stream.getFormat();
-            info = new DataLine.Info(Clip.class, format);
-            clip = (Clip) AudioSystem.getLine(info);
             clip.open(stream);
             clip.start();
             return true;
         } catch (Exception e) {
-            System.out.println("Error playing file.");
+            System.out.println(SOUND_PLAY_ERROR);
             e.printStackTrace();
             return false;
         }
