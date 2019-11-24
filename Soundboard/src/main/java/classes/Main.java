@@ -1,10 +1,6 @@
 package classes;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -20,10 +16,7 @@ import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-/**
- *
- * @author mikko
- */
+
 public class Main extends Application implements EventHandler<ActionEvent> {
 
     Board testboard = new Board();
@@ -49,15 +42,15 @@ public class Main extends Application implements EventHandler<ActionEvent> {
         primaryStage.setScene(scene);
 
         primaryStage.show();
-        testboard.replaceFile(1, "Clap1.wav");
-        testboard.replaceFile(2, "Clap2.wav");
-        testboard.replaceFile(3, "Hat1.wav");
-        testboard.replaceFile(4, "Hat2.wav");
-        testboard.replaceFile(5, "Kick1.wav");
-        testboard.replaceFile(6, "Kick2.wav");
-        testboard.replaceFile(7, "Perc1.wav");
-        testboard.replaceFile(8, "Snare1.wav");
-        testboard.replaceFile(9, "Snare2.wav");
+        testboard.replaceFile(0, "Clap1.wav");
+        testboard.replaceFile(1, "Clap2.wav");
+        testboard.replaceFile(2, "Hat1.wav");
+        testboard.replaceFile(3, "Hat2.wav");
+        testboard.replaceFile(4, "Kick1.wav");
+        testboard.replaceFile(5, "Kick2.wav");
+        testboard.replaceFile(6, "Perc1.wav");
+        testboard.replaceFile(7, "Snare1.wav");
+        testboard.replaceFile(8, "Snare2.wav");
 
         
     }
@@ -82,7 +75,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
     public Button createTemplateButton() {
         //create picture of a button for UI
         //set position depending on int X and Y value
-        testboard.createSoundPad("");
+        SoundPad newSoundPad = testboard.createSoundPad("");
 
         Image buttonImage = new Image("file:UIbutton1.png");
 
@@ -101,7 +94,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
         Button btn = new Button("", buttonView);
         btn.setOpacity(0);
         btn.setBackground(bg);
-        btn.setId(String.valueOf(testboard.getNumberOfButtons()));
+        btn.setId(String.valueOf(newSoundPad.getSoundPadNumber()));
         
 
         if (this.buttonX > 500) {

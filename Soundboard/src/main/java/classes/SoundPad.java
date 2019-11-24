@@ -12,13 +12,13 @@ import javax.sound.sampled.DataLine;
 public class SoundPad {
 
     private String fileName;
-    private String buttonName;
-    private int buttonNumber;
+    private String soundPadName;
+    private int soundPadNumber;
 
     public SoundPad(String filename, int buttonNumber) {
         this.fileName = filename;
-        this.buttonName = filename;
-        this.buttonNumber = buttonNumber;
+        this.soundPadName = filename;
+        this.soundPadNumber = buttonNumber;
     }
 
     public String getFilename() {
@@ -29,20 +29,20 @@ public class SoundPad {
         this.fileName = filename;
     }
 
-    public String getButtonName() {
-        return buttonName;
+    public String getSoundPadName() {
+        return soundPadName;
     }
 
-    public void setButtonName(String buttonName) {
-        this.buttonName = buttonName;
+    public void setSoundPadName(String soundPadName) {
+        this.soundPadName = soundPadName;
     }
 
-    public int getButtonNumber() {
-        return buttonNumber;
+    public int getSoundPadNumber() {
+        return soundPadNumber;
     }
 
-    public void setButtonNumber(int buttonNumber) {
-        this.buttonNumber = buttonNumber;
+    public void setSoundPadNumber(int soundPadNumber) {
+        this.soundPadNumber = soundPadNumber;
     }
     
     
