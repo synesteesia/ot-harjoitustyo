@@ -8,9 +8,9 @@
 | 13.11 | 3    | maven/javafx troubleshoot           |
 | 13.11 | 2    | perus javafx                        |
 | 20.11.| 4    | UI aloitus                          |
+| 23.11.| 2    | Testit  |
+| 24.11.| 2    | Dokumentaatio  |
 |       |      |  |
 |       |      |  |
 |       |      |  |
-|       |      |  |
-|       |      |  |
-| yht   |  16  |  | 
+| yht   |  20  |  | 

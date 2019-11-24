@@ -13,3 +13,5 @@ mvn jacoco:report
 [vaatimusmaarittely.md](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 
 [tuntikirjanpito.md](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
+
+[arkkitehtuuri.md](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
