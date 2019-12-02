@@ -29,7 +29,7 @@ public class SoundPadTest {
 
     @Test
     public void playSoundWithNoFileWorks() {
-       SoundPad testPadNoFile = new SoundPad("", 1);
+       SoundPad testPadNoFile = new SoundPad(" ", 1);
 
         assertTrue(testPadNoFile.playSound());
 

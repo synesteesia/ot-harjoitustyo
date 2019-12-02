@@ -16,10 +16,10 @@ public class SoundPad {
     private String soundPadName;
     private int soundPadNumber;
 
-    public SoundPad(String filename, int buttonNumber) {
+    public SoundPad(String filename, int padNumber) {
         this.fileName = filename;
         this.soundPadName = filename;
-        this.soundPadNumber = buttonNumber;
+        this.soundPadNumber = padNumber;
     }
 
     public String getFilename() {
@@ -49,13 +49,11 @@ public class SoundPad {
     
 
     public boolean playSound() {
-        //use this buttons fileName and play it
-        
-        if (this.fileName.equals("")) {
-            
+        //use this buttons fileName and play it  
+        if (this.fileName.equals(" ")) {
             return true;
         }
-
+        
         try {
             File audioFile = new File(this.fileName);
             AudioInputStream stream = AudioSystem.getAudioInputStream(audioFile);
@@ -66,6 +64,7 @@ public class SoundPad {
             clip.open(stream);
             clip.start();
             return true;
+            
         } catch (Exception e) {
             System.out.println(SOUND_PLAY_ERROR);
             e.printStackTrace();

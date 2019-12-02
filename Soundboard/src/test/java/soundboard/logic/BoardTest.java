@@ -40,7 +40,7 @@ public class BoardTest {
 
     @Test
     public void useSoundPadHandlesInvalidInput() {
-        testBoard.useSoundPad("kissa");
+        testBoard.useSoundPad("Kissa");
         assertTrue(outContent.toString().contains(Board.ERROR_NOT_A_NUMBER));
     }
 
@@ -52,7 +52,7 @@ public class BoardTest {
 
     @Test
     public void useDeletePadWorks() {
-        testBoard.deleteSoundPad(0);
+        testBoard.deleteSoundPad("0");
         assertEquals("", testBoard.copyList().get(0).getFilename());
         assertEquals("", testBoard.copyList().get(0).getSoundPadName());
 
@@ -60,7 +60,7 @@ public class BoardTest {
 
     @Test
     public void renameSoundPadWorks() {
-        testBoard.renameSoundPad(0, "working");
+        testBoard.renameSoundPad("0", "working");
         ArrayList<SoundPad> clone = testBoard.copyList();
         assertEquals("working", clone.get(0).getSoundPadName());
 
@@ -68,27 +68,51 @@ public class BoardTest {
 
     @Test
     public void replaceFile() {
-        testBoard.replaceFile(0, "Kick1.wav");
+        testBoard.replaceFile("0", "Kick1.wav");
         ArrayList<SoundPad> clone = testBoard.copyList();
         assertEquals("Kick1.wav", clone.get(0).getFilename());
     }
 
     @Test
     public void cloneSoundPadWorks() {
-        testBoard.cloneSoundPad(0, 1);
+        testBoard.cloneSoundPad("0", "1");
         ArrayList<SoundPad> clone = testBoard.copyList();
         assertEquals("test.wav", clone.get(0).getFilename());
         assertEquals("test.wav", clone.get(0).getSoundPadName());
 
     }
+    
+    @Test
+    public void cloneSoundPadHandlesInvalidInput() {
+        testBoard.cloneSoundPad("kissa", "koira");
+        assertTrue(outContent.toString().contains(Board.ERROR_NOT_A_NUMBER));
+    }
+
+    @Test
+    public void cloneSoundPadHandlesInvalidNumber() {
+        testBoard.cloneSoundPad("10", "11");
+        assertTrue(outContent.toString().contains(Board.INVALID_NUMBER));
+    }
 
     @Test
     public void swapWorks() {
-        testBoard.swapSoundPads(0, 1);
+        testBoard.swapSoundPads("0", "1");
         ArrayList<SoundPad> clone = testBoard.copyList();
         assertEquals("Hat1.wav", clone.get(0).getFilename());
         assertEquals("test.wav", clone.get(1).getFilename());
 
+    }
+    
+    @Test
+    public void swapHandlesInvalidInput() {
+        testBoard.swapSoundPads("kissa", "koira");
+        assertTrue(outContent.toString().contains(Board.ERROR_NOT_A_NUMBER));
+    }
+
+    @Test
+    public void swapHandlesInvalidNumber() {
+        testBoard.swapSoundPads("10", "11");
+        assertTrue(outContent.toString().contains(Board.INVALID_NUMBER));
     }
 
 }

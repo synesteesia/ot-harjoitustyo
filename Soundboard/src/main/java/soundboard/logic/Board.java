@@ -5,9 +5,9 @@ import java.util.Collections;
 
 public class Board {
 
-    static final String ERROR_NOT_A_NUMBER = "Input not a number";
-    static final String INVALID_NUMBER = "Invalid number";
-    private static final String EMPTY_STRING = "";
+    static final String ERROR_NOT_A_NUMBER = "Input not a number ";
+    static final String INVALID_NUMBER = "Invalid number ";
+    private static final String EMPTY_STRING = " ";
 
     private final ArrayList<SoundPad> soundPadList;
 
@@ -44,35 +44,62 @@ public class Board {
         }
     }
 
-    public void deleteSoundPad(int soundPadNumber) {
+    public void deleteSoundPad(String padNumberString) {
         //set a pads file and name to empty
-        this.soundPadList.get(soundPadNumber).setFilename(EMPTY_STRING);
-        this.soundPadList.get(soundPadNumber).setSoundPadName(EMPTY_STRING);
+
+        int padNumber = Integer.parseInt(padNumberString);
+        this.soundPadList.get(padNumber).setFilename(EMPTY_STRING);
+        this.soundPadList.get(padNumber).setSoundPadName(EMPTY_STRING);
 
     }
 
-    public void renameSoundPad(int soundPadNumber, String newName) {
+    public void renameSoundPad(String padNumberString, String newName) {
         //find pad by its number and replace its name with new String
-        this.soundPadList.get(soundPadNumber).setSoundPadName(newName);
+        int padNumber = Integer.parseInt(padNumberString);
+        this.soundPadList.get(padNumber).setSoundPadName(newName);
 
     }
 
-    public void replaceFile(int soundPadNumber, String newFile) {
+    public void replaceFile(String padNumberString, String newFile) {
         //find button by its number, then replace its audio file path with new String.
         //replace button name with new file name
-        this.soundPadList.get(soundPadNumber).setFilename(newFile);
-        this.soundPadList.get(soundPadNumber).setSoundPadName(newFile);
+        int padNumber = Integer.parseInt(padNumberString);
+        this.soundPadList.get(padNumber).setFilename(newFile);
+        this.soundPadList.get(padNumber).setSoundPadName(newFile);
 
     }
 
-    public void cloneSoundPad(int toBeCloned, int toBeReplaced) {
+    public void cloneSoundPad(String toBeClonedString, String toBeReplaced) {
         //replace file path and name to be equal to another pad
-        this.replaceFile(toBeReplaced, this.soundPadList.get(toBeCloned).getFilename());
+        try {
+            int toBeCloned = Integer.parseInt(toBeClonedString);
+            this.replaceFile(toBeReplaced, this.soundPadList.get(toBeCloned).getFilename());
+
+        } catch (NumberFormatException e) {
+            System.out.print(ERROR_NOT_A_NUMBER);
+            System.out.print(e.getMessage());
+
+        } catch (IndexOutOfBoundsException ie) {
+            System.out.print(INVALID_NUMBER);
+            System.out.print(ie.getMessage());
+        }
     }
 
-    public void swapSoundPads(int firstPad, int secondPad) {
+    public void swapSoundPads(String firstPadString, String secondPadString) {
         //swap places of two buttons in the list
-        Collections.swap(this.soundPadList, firstPad, secondPad);
+        try {
+            int firstPad = Integer.parseInt(firstPadString);
+            int secondPad = Integer.parseInt(secondPadString);
+            Collections.swap(this.soundPadList, firstPad, secondPad);
+            
+        } catch (NumberFormatException e) {
+            System.out.print(ERROR_NOT_A_NUMBER);
+            System.out.print(e.getMessage());
+
+        } catch (IndexOutOfBoundsException ie) {
+            System.out.print(INVALID_NUMBER);
+            System.out.print(ie.getMessage());
+        }
 
     }
 }
