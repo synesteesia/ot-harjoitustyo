@@ -13,7 +13,7 @@
 | 27.11.| 3    | context menu/tests                  |
 | 28.11.| 3    | context menu/handlers               |
 | 2.12  | 2    | button text                         |
-| 3.12  | 3    | dokumentaatio                       |
+| 3.12  | 3    | dokumentaatio ja release            |
 |   |   |                         |
 
 | yht   |  31  |  | 

@@ -2,11 +2,8 @@
 
 ## Sovelluksen tarkoitus
 
-Sovelluksen avulla käyttäjä voi aktivoida ääniä pikanäppäimillä tai klikkaamalla graafista käyttöliittymää. Käyttäjä voi lisätä käyttöliittymään omia äänitiedostoja. Sovellusta on mahdollista käyttää useamman rekisteröityneen käyttäjän, joilla kaikilla on oma yksilöllinen soundboardinsa.
+Sovelluksen avulla käyttäjä voi aktivoida ääniä klikkaamalla graafista käyttöliittymää. Käyttäjä voi lisätä käyttöliittymään omia äänitiedostoja. Sovelluksella on mahdollista avata eri käyttäjien tekemiä ja tallettamia soundboard tiedostoja.
 
-## Käyttäjät
-
-Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjärooli eli normaali käyttäjä.
 
 ## Käyttöliittymäluonnos
 
@@ -14,22 +11,19 @@ Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjärooli eli normaali kä
 
 ## Perusversion tarjoama toiminnallisuus
 
-- käyttäjä näkee oman soundboardinsa.
+- käyttäjä näkee oman soundboardinsa.  -tehty
 
-- käyttäjä voi luoda uuden soundboardin.
-
-- käyttäjä voi lisätä nappeja soundboardiin ja niihin omia äänitiedostojaan.
+- käyttäjä voi lisätä soundboardiin omia äänitiedostojaan. -tehty
 
 - käyttäjä voi tallentaa soundbordin avattavana tiedostona.
 
-- käyttäjä voi aktivoida ääniä klikkaamalla nappeja.
+- käyttäjä voi aktivoida ääniä klikkaamalla nappeja. -tehty
 
 ## Jatkokehitysideoita
 
 Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla
 
-- näppäimistö pikamäppäinten asetus
-- nappien nimeäminen
-- nappien poistaminen
-- napin kloonaaminen
-- äänien voimakkuuden säätö nappeihin
+- nappien nimeäminen -tehty
+- nappien poistaminen -tehty
+- napin kloonaaminen -tehty
+- kahden napin paikan vaihtaminen -tehty
