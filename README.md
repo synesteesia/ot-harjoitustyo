@@ -42,7 +42,7 @@ mvn package
 ```
 
 generoi hakemistoon _target_ suoritettavan jar-tiedoston _Soundboard-1.0-SNAPSHOT.jar_
-Tiedosto toimii joko siirtämällä se päähakemistoon _Soundboard_ tai purkamalla sen suoritushakemistoon _target_ hakemistosta löytyvän _soundBoardFiles.zip_ tiedoston.
+Tiedosto toimii joko siirtämällä se hakemistoon _Soundboard_ tai purkamalla sen suoritushakemistoon _Soundboard_ hakemistosta löytyvän _soundBoardFiles.zip_ tiedoston.
 
 
 ### Checkstyle
