@@ -8,3 +8,5 @@ Kuvassa alustava luokkakaavio. Ainakin handlereita tulee varmasti lisaa sovelluk
 
 ## Sekvenssikaavio kun käyttäjä klikkaa soundPadia
 
+
+<img src="https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/Kuvat/sekvenssiClickPad.jpg" width="750">
