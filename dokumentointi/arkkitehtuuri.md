@@ -10,4 +10,4 @@ Kuvassa alustava luokkakaavio. Ainakin handlereita tulee varmasti lisaa sovelluk
 
 kun käyttäjä klikkaa soundPadia
 
-<img src="https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/Kuvat/sekvenssiClickPad.jpg" width="750">
+<img src="https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/Kuvat/SekvenssiClickPad.jpg" width="750">
