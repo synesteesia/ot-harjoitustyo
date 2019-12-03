@@ -87,7 +87,7 @@ public class Main extends Application {
         //set click action
         SoundPad newSoundPad = board.createSoundPad("");
 
-        Image buttonImage = new Image("file:UIbutton1.png");
+        Image buttonImage = new Image("file:UIbutton.png");
 
         ImageView buttonView = new ImageView();
         buttonView.setImage(buttonImage);

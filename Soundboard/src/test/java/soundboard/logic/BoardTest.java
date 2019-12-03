@@ -53,8 +53,8 @@ public class BoardTest {
     @Test
     public void useDeletePadWorks() {
         testBoard.deleteSoundPad("0");
-        assertEquals("", testBoard.copyList().get(0).getFilename());
-        assertEquals("", testBoard.copyList().get(0).getSoundPadName());
+        assertEquals(" ", testBoard.copyList().get(0).getFilename());
+        assertEquals(" ", testBoard.copyList().get(0).getSoundPadName());
 
     }
 
