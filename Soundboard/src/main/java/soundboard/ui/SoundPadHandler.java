@@ -17,7 +17,6 @@ public class SoundPadHandler implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
-        //activates when mousebutton is down, not on release
         Button x = (Button) event.getSource();
         soundBoard.useSoundPad(x.getId());
     }

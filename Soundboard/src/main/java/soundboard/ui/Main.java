@@ -102,6 +102,7 @@ public class Main extends Application {
         Background bg = new Background(bgi);
 
         Button button = new Button(" ", buttonView);
+        
         button.setContentDisplay(ContentDisplay.TOP);
         button.setTextFill(WHITE);
 

@@ -1,4 +1,3 @@
-
 package soundboard.ui;
 
 import java.util.ArrayList;
@@ -37,14 +36,13 @@ public class SwapHandler extends AbstractHandler {
         swap.setOnAction((ActionEvent submitEvent) -> {
             String swapNumber = userText.getText();
             soundBoard.swapSoundPads(x.getId(), swapNumber);
-            
+
             ((Button) root.getChildren().get(Integer.parseInt(swapNumber) + 1))
                     .setText(soundPadList.get(Integer.parseInt(x.getId())).getSoundPadName());
-            
+
             ((Button) root.getChildren().get(Integer.parseInt(x.getId()) + 1))
                     .setText(soundPadList.get(Integer.parseInt(swapNumber)).getSoundPadName());
 
-            
             stage.close();
         });
         grid.getChildren().add(swap);
