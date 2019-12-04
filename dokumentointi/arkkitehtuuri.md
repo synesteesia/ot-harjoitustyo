@@ -4,7 +4,7 @@
 
 Koodin pakkausrakenne on seuraava:
 
-<img src="https://raw.githubusercontent.com/mluukkai/ohjelmistotekniikka-kevat2019/master/web/images/l-11.png" width="160">
+<img src="https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/Kuvat/pakettikaavio.jpg" width="160">
 
 Pakkaus _soundboard.ui_ sisältää JavaFX:llä toteutetun käyttöliittymän ja _soundboard.logic_ sovelluslogiikan.
 
