@@ -15,9 +15,12 @@
 | 2.12  | 2    | button text                         |
 | 3.12  | 3    | dokumentaatio ja release            |
 | 4.12  | 3    | load ja save                        |
+| 4.12  | 2    | kayttooje ja arkkitehtuuri          |
+|   |   |                         |
+|   |   |                         |
 |   |   |                         |
 |   |   |                         |
 |   |   |                         |
 
 
-| yht   |  34  |  | 
+| yht   |  36  |  | 
