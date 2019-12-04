@@ -1,19 +1,19 @@
 package soundboard.logic;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Board {
+public class Board implements Serializable {
 
     static final String ERROR_NOT_A_NUMBER = "Input not a number ";
     static final String INVALID_NUMBER = "Invalid number ";
-    private static final String EMPTY_STRING = " ";
+    private static final String EMPTY_STRING = "EMPTY";
 
     private final ArrayList<SoundPad> soundPadList;
 
     public Board() {
         this.soundPadList = new ArrayList<>();
-
     }
 
     public ArrayList<SoundPad> copyList() {
@@ -91,7 +91,7 @@ public class Board {
             int firstPad = Integer.parseInt(firstPadString);
             int secondPad = Integer.parseInt(secondPadString);
             Collections.swap(this.soundPadList, firstPad, secondPad);
-            
+
         } catch (NumberFormatException e) {
             System.out.print(ERROR_NOT_A_NUMBER);
             System.out.print(e.getMessage());
@@ -101,5 +101,25 @@ public class Board {
             System.out.print(ie.getMessage());
         }
 
+    }
+
+    public void loadSavedBoard(String file) {
+        Board savedBoard = BoardIO.readBoardFromFile(file);
+
+        this.soundPadList.clear();
+        this.soundPadList.addAll(savedBoard.copyList());
+    }
+
+    public void saveBoardToFile(String file) {
+        BoardIO.writeBoardToFile(this, file);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder outputString = new StringBuilder();
+        for (SoundPad soundPad : soundPadList) {
+            outputString.append(soundPad.toString());
+        }
+        return outputString.toString();
     }
 }

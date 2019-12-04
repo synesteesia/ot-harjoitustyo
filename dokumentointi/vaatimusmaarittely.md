@@ -15,7 +15,7 @@ Sovelluksen avulla käyttäjä voi aktivoida ääniä klikkaamalla graafista kä
 
 - käyttäjä voi lisätä soundboardiin omia äänitiedostojaan. -tehty
 
-- käyttäjä voi tallentaa soundbordin avattavana tiedostona.
+- käyttäjä voi tallentaa soundbordin avattavana tiedostona. -tehty
 
 - käyttäjä voi aktivoida ääniä klikkaamalla nappeja. -tehty
 

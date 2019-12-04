@@ -14,6 +14,10 @@
 | 28.11.| 3    | context menu/handlers               |
 | 2.12  | 2    | button text                         |
 | 3.12  | 3    | dokumentaatio ja release            |
+| 4.12  | 3    | load ja save                        |
+|   |   |                         |
+|   |   |                         |
 |   |   |                         |
 
-| yht   |  31  |  | 
+
+| yht   |  34  |  | 

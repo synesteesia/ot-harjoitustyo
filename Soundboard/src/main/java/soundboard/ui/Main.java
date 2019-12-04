@@ -22,6 +22,7 @@ import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.Pane;
 import static javafx.scene.paint.Color.WHITE;
 import javafx.stage.Stage;
+import soundboard.logic.BoardIO;
 
 public class Main extends Application {
 
@@ -35,6 +36,8 @@ public class Main extends Application {
     EventHandler replaceFileHandler = new ReplaceFileHandler(board, root);
     EventHandler cloneHandler = new CloneHandler(board, root);
     EventHandler swapHandler = new SwapHandler(board, root);
+    EventHandler saveHandler = new SaveHandler(board, root);
+    EventHandler loadHandler = new LoadHandler(board, root);
 
     @Override
     public void start(Stage primaryStage) {
@@ -44,18 +47,8 @@ public class Main extends Application {
         for (int i = 1; i < 10; i++) {
             root.getChildren().add(this.createSoundPadButton());
         }
-        this.buttonX = 15;
-        this.buttonY = 20;
 
-        board.replaceFile("0", "Clap1.wav");
-        board.replaceFile("1", "Clap2.wav");
-        board.replaceFile("2", "Hat1.wav");
-        board.replaceFile("3", "Hat2.wav");
-        board.replaceFile("4", "Kick1.wav");
-        board.replaceFile("5", "Kick2.wav");
-        board.replaceFile("6", "Perc1.wav");
-        board.replaceFile("7", "Snare1.wav");
-        board.replaceFile("8", "Snare2.wav");
+        board.loadSavedBoard(BoardIO.FILENAME);
 
         for (int i = 1; i < 10; i++) {
             this.setButtonTexts(i);
@@ -129,7 +122,7 @@ public class Main extends Application {
     public void setButtonTexts(int buttonNumber) {
         ArrayList<SoundPad> copy = board.copyList();
         ((Button) root.getChildren().get(buttonNumber))
-                .setText(copy.get(buttonNumber - 1).getSoundPadName());
+                .setText((buttonNumber - 1) + ". " +copy.get(buttonNumber - 1).getSoundPadName());
 
     }
 
@@ -152,7 +145,13 @@ public class Main extends Application {
         MenuItem swap = new MenuItem("Swap");
         swap.addEventHandler(EventType.ROOT, swapHandler);
         swap.setId(id);
-        menu.getItems().addAll(delete, rename, replaceFile, clone, swap);
+        MenuItem save = new MenuItem("Save");
+        save.addEventHandler(EventType.ROOT, saveHandler);
+        save.setId(id);
+        MenuItem load = new MenuItem("Load");
+        load.addEventHandler(EventType.ROOT, loadHandler);
+        load.setId(id);
+        menu.getItems().addAll(delete, rename, replaceFile, clone, swap, save, load);
         return menu;
     }
 

@@ -2,6 +2,7 @@ package soundboard.logic;
 
 
 import java.io.File;
+import java.io.Serializable;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -9,7 +10,7 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
 
 
-public class SoundPad {
+public class SoundPad implements Serializable {
 
     private static final String SOUND_PLAY_ERROR = "Error playing file.";
     private String fileName;
@@ -53,7 +54,7 @@ public class SoundPad {
         if (this.fileName.equals(" ")) {
             return true;
         }
-        
+
         try {
             File audioFile = new File(this.fileName);
             AudioInputStream stream = AudioSystem.getAudioInputStream(audioFile);
@@ -71,5 +72,12 @@ public class SoundPad {
             return false;
         }
     }
+
+    @Override
+    public String toString() {
+        return "fileName=" + fileName + ", soundPadName=" + soundPadName + ", soundPadNumber=" + soundPadNumber + "\n";
+    }
+    
+    
 
 }

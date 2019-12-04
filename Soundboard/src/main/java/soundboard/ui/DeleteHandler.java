@@ -22,6 +22,6 @@ public class DeleteHandler implements EventHandler<ActionEvent> {
         MenuItem x = (MenuItem) event.getSource();
         soundBoard.deleteSoundPad(x.getId());
         ((Button) root.getChildren().get(Integer.parseInt(x.getId()) + 1))
-                    .setText(" ");
+                    .setText(x.getId() + ". " + "EMPTY");
     }
 }
