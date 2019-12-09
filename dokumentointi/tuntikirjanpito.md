@@ -16,11 +16,11 @@
 | 3.12  | 3    | dokumentaatio ja release            |
 | 4.12  | 3    | load ja save                        |
 | 4.12  | 2    | kayttooje ja arkkitehtuuri          |
-|   |   |                         |
-|   |   |                         |
-|   |   |                         |
+| 9.12. | 2    | javadoc                             |
+| 9.12. | 2    | testit                              |
+| 9.12  | 1    | release tarkistus                   |
 |   |   |                         |
 |   |   |                         |
 
 
-| yht   |  36  |  | 
+| yht   |  41  |  | 

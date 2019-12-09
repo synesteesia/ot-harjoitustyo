@@ -17,6 +17,8 @@ Sovelluksen avulla käyttäjä voi soittaa haluamiaan .wav äänitiedostoja klik
 
 [Viikko 5](https://github.com/synesteesia/ot-harjoitustyo/releases/tag/Viikko5)
 
+[Viikko 6](https://github.com/synesteesia/ot-harjoitustyo/releases/tag/Viikko6)
+
 ## Komentorivitoiminnot
 
 ### Testaus
@@ -56,3 +58,13 @@ Tiedoston [checkstyle.xml](https://github.com/synesteesia/ot-harjoitustyo/blob/m
 ```
 
 Mahdolliset virheilmoitukset selviävät avaamalla selaimella tiedosto _target/site/checkstyle.html_
+
+### JavaDoc
+
+JavaDoc generoidaan komennolla
+
+```
+mvn javadoc:javadoc
+```
+
+JavaDocia voi tarkastella avaamalla selaimella tiedosto _target/site/apidocs/index.html_
