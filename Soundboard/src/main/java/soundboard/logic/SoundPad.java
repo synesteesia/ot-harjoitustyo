@@ -9,13 +9,20 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
 
+/**
+ * Class responsible of playing specific sound files.
+ */
+
 
 public class SoundPad implements Serializable {
 
     private static final String SOUND_PLAY_ERROR = "Error playing file.";
+    private static final String EMPTY_STRING = "EMPTY";
     private String fileName;
     private String soundPadName;
     private int soundPadNumber;
+
+    
 
     public SoundPad(String filename, int padNumber) {
         this.fileName = filename;
@@ -48,10 +55,14 @@ public class SoundPad implements Serializable {
     }
     
     
-
+    /**
+    * Attempts to use this SoundPads fileName and play the corresponding file.
+    * @return Boolean according to success of the attempt.
+    * 
+    */
     public boolean playSound() {
-        //use this buttons fileName and play it  
-        if (this.fileName.equals(" ")) {
+        
+        if (this.fileName.equals(EMPTY_STRING)) {
             return true;
         }
 

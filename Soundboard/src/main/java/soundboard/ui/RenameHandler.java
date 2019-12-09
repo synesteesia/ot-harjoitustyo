@@ -1,4 +1,3 @@
-
 package soundboard.ui;
 
 import javafx.event.ActionEvent;
@@ -9,7 +8,11 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import soundboard.logic.Board;
 
-
+/**
+ * Class responsible of handling the event of user choosing the Rename option of
+ * a SoundPad object in the UI.
+ *
+ */
 public class RenameHandler extends AbstractHandler {
 
     private Pane root;
@@ -19,6 +22,11 @@ public class RenameHandler extends AbstractHandler {
         this.root = root;
     }
 
+    /**
+     * Uses the click of user to identify the SoundPad the user wants to rename and renames it according to user input in both the UI and the object itself.
+     *
+     * @param event Click by user.
+     */
     @Override
     public void handle(ActionEvent event) {
         //window to type in newName
@@ -35,9 +43,9 @@ public class RenameHandler extends AbstractHandler {
         rename.setOnAction((ActionEvent submitEvent) -> {
             String newName = userText.getText();
             soundBoard.renameSoundPad(x.getId(), newName);
-           
+
             ((Button) root.getChildren().get(Integer.parseInt(x.getId()) + 1))
-                    .setText(newName);
+                    .setText(x.getId() + "." + newName);
             stage.close();
         });
         grid.getChildren().add(rename);

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import soundboard.logic.Board;
 import soundboard.logic.SoundPad;
 import javafx.application.Application;
-
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.scene.Scene;
@@ -24,7 +23,7 @@ import static javafx.scene.paint.Color.WHITE;
 import javafx.stage.Stage;
 import soundboard.logic.BoardIO;
 
-public class Main extends Application {
+public class SoundboardUi extends Application {
 
     Board board = new Board();
     int buttonX = 15;

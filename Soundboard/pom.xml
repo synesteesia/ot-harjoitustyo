@@ -39,7 +39,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>soundboard.ui.Main</mainClass>
+                                    <mainClass>soundboard.logic.Main</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
