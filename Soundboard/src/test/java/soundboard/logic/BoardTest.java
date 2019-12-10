@@ -1,7 +1,5 @@
 package soundboard.logic;
 
-
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -9,7 +7,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
 
 public class BoardTest {
 
@@ -80,7 +77,7 @@ public class BoardTest {
         assertEquals("test.wav", clone.get(0).getSoundPadName());
 
     }
-    
+
     @Test
     public void cloneSoundPadHandlesInvalidInput() {
         testBoard.cloneSoundPad("kissa", "koira");
@@ -101,7 +98,7 @@ public class BoardTest {
         assertEquals("test.wav", clone.get(1).getFilename());
 
     }
-    
+
     @Test
     public void swapHandlesInvalidInput() {
         testBoard.swapSoundPads("kissa", "koira");
@@ -114,4 +111,18 @@ public class BoardTest {
         assertTrue(outContent.toString().contains(Board.INVALID_NUMBER));
     }
 
+    @Test
+    public void toStringWorks() {
+        String expected = "";
+        for (SoundPad soundPad : testBoard.copyList()) {
+            expected += soundPad.toString();
+        }
+        assertEquals(testBoard.toString(), expected);
+    }
+    
+    @Test
+    public void loadSavedBoardWorks() {
+        testBoard.loadSavedBoard("DefaultSoundBoard");
+        assertEquals(testBoard.copyList().size(), 9);
+    }
 }

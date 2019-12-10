@@ -58,7 +58,7 @@
                 <configuration>
                     <excludes>
                         <exclude>soundboard/ui/*</exclude>
-						<exclude>soundboard/ui/handlers/*</exclude>
+			<exclude>soundboard/ui/handlers/*</exclude>
                     </excludes>
                 </configuration>  
                 <executions>

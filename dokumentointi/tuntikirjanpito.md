@@ -19,8 +19,8 @@
 | 9.12. | 2    | javadoc                             |
 | 9.12. | 2    | testit                              |
 | 9.12  | 1    | release tarkistus                   |
-|   |   |                         |
+| 10.12 | 4    | release tarkistus, testit, javadoc  |
 |   |   |                         |
 
 
-| yht   |  41  |  | 
+| yht   |  45  |  | 

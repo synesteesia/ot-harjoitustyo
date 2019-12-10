@@ -9,9 +9,10 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import soundboard.logic.Board;
 import soundboard.logic.SoundPad;
+
 /**
- * Class responsible of handling the event of user choosing the Load option of
- * a SoundPad object in the UI.
+ * Class responsible of handling the event of user choosing the Load option of a
+ * SoundPad object in the UI.
  *
  */
 public class LoadHandler extends AbstractHandler {
@@ -51,7 +52,7 @@ public class LoadHandler extends AbstractHandler {
 
             stage.close();
         });
-       update(loadBoard);
+        update(loadBoard);
 
     }
 

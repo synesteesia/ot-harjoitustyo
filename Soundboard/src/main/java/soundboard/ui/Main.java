@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package soundboard.logic;
+package soundboard.ui;
 
-import soundboard.ui.SoundboardUi;
+public class Main {
 
-
-    public class Main {
     public static void main(String[] args) {
         SoundboardUi.main(args);
-        
+
     }
 }
