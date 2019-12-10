@@ -23,11 +23,11 @@
             <version>1.10.19</version>
             <scope>test</scope>
         </dependency>
-		<dependency>
-    		<groupId>org.openjfx</groupId>
-    		<artifactId>javafx-controls</artifactId>
-    		<version>12.0.2</version>
-		</dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>12.0.2</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -44,7 +44,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>soundboard.logic.Main</mainClass>
+                                    <mainClass>soundboard.ui.Main</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -58,7 +58,7 @@
                 <configuration>
                     <excludes>
                         <exclude>soundboard/ui/*</exclude>
-			<exclude>soundboard/ui/handlers/*</exclude>
+                        <exclude>soundboard/ui/handlers/*</exclude>
                     </excludes>
                 </configuration>  
                 <executions>
@@ -83,14 +83,14 @@
                 <artifactId>maven-jxr-plugin</artifactId>
                 <version>2.5</version>
             </plugin>
-			<plugin>
-    			<groupId>org.openjfx</groupId>
-    			<artifactId>javafx-maven-plugin</artifactId>
-    			<version>0.0.3</version>
-    			<configuration>
-        			<mainClass>org.openjfx.App</mainClass>
-    			</configuration>
-			</plugin>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.3</version>
+                <configuration>
+                    <mainClass>org.openjfx.App</mainClass>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
