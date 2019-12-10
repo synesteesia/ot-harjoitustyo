@@ -14,6 +14,8 @@ public class BoardIO {
     public static final String FILENAME = "DefaultSoundBoard";
     static final String ERROR_NO_SUCH_FILE = "File not found ";
     static final String ERROR_READING_FILE = "Error reading file ";
+    static final String ERROR_SAVING_FILE = "Error saving file ";
+    static final String LOAD_SUCCESSFULL = "Soundboard loaded successfully ";
 
     /**
      * Creates a new Board object by reading a save file
@@ -27,13 +29,14 @@ public class BoardIO {
         try (FileInputStream fileIn = new FileInputStream(file);
                 ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
             board = (Board) objectIn.readObject();
+            System.out.println(LOAD_SUCCESSFULL);
 
         } catch (FileNotFoundException noFile) {
             System.out.println(ERROR_NO_SUCH_FILE);
-            System.out.println(noFile.getMessage());
+            
         } catch (Exception ex) {
             System.out.println(ERROR_READING_FILE);
-            System.out.println(ex.getMessage());
+            
         }
 
         return board;
@@ -56,7 +59,8 @@ public class BoardIO {
             }
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            System.out.println(ERROR_SAVING_FILE);
+            
         }
     }
 }

@@ -1,4 +1,4 @@
-package soundboard.ui;
+package soundboard.ui.handlers;
 
 import java.util.ArrayList;
 import javafx.event.ActionEvent;
@@ -38,14 +38,10 @@ public class ReplaceFileHandler extends AbstractHandler {
             String newFileName = userText.getText();
             soundBoard.replaceFile(x.getId(), newFileName);
             ((Button) root.getChildren().get(Integer.parseInt(x.getId()) + 1))
-                    .setText(newFileName);
+                    .setText(x.getId() + ". " + newFileName);
             stage.close();
         });
-        grid.getChildren().add(newFile);
-
-        Scene stageScene = new Scene(grid, 300, 50);
-        stage.setScene(stageScene);
-        stage.show();
+        update(newFile);
 
     }
 }

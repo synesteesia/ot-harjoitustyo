@@ -11,5 +11,6 @@ import soundboard.ui.SoundboardUi;
     public class Main {
     public static void main(String[] args) {
         SoundboardUi.main(args);
+        
     }
 }

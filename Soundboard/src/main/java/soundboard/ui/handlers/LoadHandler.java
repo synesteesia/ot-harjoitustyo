@@ -1,8 +1,7 @@
-package soundboard.ui;
+package soundboard.ui.handlers;
 
 import java.util.ArrayList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
@@ -10,8 +9,12 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import soundboard.logic.Board;
 import soundboard.logic.SoundPad;
-
-class LoadHandler extends AbstractHandler {
+/**
+ * Class responsible of handling the event of user choosing the Load option of
+ * a SoundPad object in the UI.
+ *
+ */
+public class LoadHandler extends AbstractHandler {
 
     private Board soundBoard;
     private ArrayList<SoundPad> soundPadList;
@@ -48,11 +51,7 @@ class LoadHandler extends AbstractHandler {
 
             stage.close();
         });
-        grid.getChildren().add(loadBoard);
-
-        Scene stageScene = new Scene(grid, 300, 50);
-        stage.setScene(stageScene);
-        stage.show();
+       update(loadBoard);
 
     }
 

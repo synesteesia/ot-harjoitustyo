@@ -1,4 +1,4 @@
-package soundboard.ui;
+package soundboard.ui.handlers;
 
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
@@ -48,11 +48,7 @@ public class RenameHandler extends AbstractHandler {
                     .setText(x.getId() + "." + newName);
             stage.close();
         });
-        grid.getChildren().add(rename);
-
-        Scene stageScene = new Scene(grid, 300, 50);
-        stage.setScene(stageScene);
-        stage.show();
+        update(rename);
 
     }
 }

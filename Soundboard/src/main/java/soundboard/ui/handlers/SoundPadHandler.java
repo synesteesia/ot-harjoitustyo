@@ -1,4 +1,4 @@
-package soundboard.ui;
+package soundboard.ui.handlers;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

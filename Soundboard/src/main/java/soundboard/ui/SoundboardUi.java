@@ -1,5 +1,13 @@
 package soundboard.ui;
 
+import soundboard.ui.handlers.SwapHandler;
+import soundboard.ui.handlers.CloneHandler;
+import soundboard.ui.handlers.SaveHandler;
+import soundboard.ui.handlers.RenameHandler;
+import soundboard.ui.handlers.DeleteHandler;
+import soundboard.ui.handlers.LoadHandler;
+import soundboard.ui.handlers.ReplaceFileHandler;
+import soundboard.ui.handlers.SoundPadHandler;
 import java.util.ArrayList;
 import soundboard.logic.Board;
 import soundboard.logic.SoundPad;
@@ -94,7 +102,7 @@ public class SoundboardUi extends Application {
         Background bg = new Background(bgi);
 
         Button button = new Button(" ", buttonView);
-        
+
         button.setContentDisplay(ContentDisplay.TOP);
         button.setTextFill(WHITE);
 
@@ -121,7 +129,7 @@ public class SoundboardUi extends Application {
     public void setButtonTexts(int buttonNumber) {
         ArrayList<SoundPad> copy = board.copyList();
         ((Button) root.getChildren().get(buttonNumber))
-                .setText((buttonNumber - 1) + ". " +copy.get(buttonNumber - 1).getSoundPadName());
+                .setText((buttonNumber - 1) + ". " + copy.get(buttonNumber - 1).getSoundPadName());
 
     }
 
@@ -153,6 +161,8 @@ public class SoundboardUi extends Application {
         menu.getItems().addAll(delete, rename, replaceFile, clone, swap, save, load);
         return menu;
     }
+
+
 
     /**
      * @param args the command line arguments

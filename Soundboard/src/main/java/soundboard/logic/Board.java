@@ -57,11 +57,11 @@ public class Board implements Serializable {
 
         } catch (NumberFormatException e) {
             System.out.print(ERROR_NOT_A_NUMBER);
-            System.out.print(e.getMessage());
+            
 
         } catch (IndexOutOfBoundsException ie) {
             System.out.print(INVALID_NUMBER);
-            System.out.print(ie.getMessage());
+            
         }
     }
 
@@ -122,11 +122,11 @@ public class Board implements Serializable {
 
         } catch (NumberFormatException e) {
             System.out.print(ERROR_NOT_A_NUMBER);
-            System.out.print(e.getMessage());
+          
 
         } catch (IndexOutOfBoundsException ie) {
             System.out.print(INVALID_NUMBER);
-            System.out.print(ie.getMessage());
+           
         }
     }
 
@@ -145,11 +145,11 @@ public class Board implements Serializable {
 
         } catch (NumberFormatException e) {
             System.out.print(ERROR_NOT_A_NUMBER);
-            System.out.print(e.getMessage());
+          
 
         } catch (IndexOutOfBoundsException ie) {
             System.out.print(INVALID_NUMBER);
-            System.out.print(ie.getMessage());
+          
         }
 
     }

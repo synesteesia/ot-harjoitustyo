@@ -3,11 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package soundboard.ui;
+package soundboard.ui.handlers;
 
 import java.util.ArrayList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
@@ -17,7 +16,7 @@ import soundboard.logic.Board;
 import soundboard.logic.SoundPad;
 
 
-class SaveHandler extends AbstractHandler {
+public class SaveHandler extends AbstractHandler {
 
 
     private Board soundBoard;
@@ -46,11 +45,8 @@ class SaveHandler extends AbstractHandler {
             soundBoard.saveBoardToFile(newBoardName);
             stage.close();
         });
-        grid.getChildren().add(saveBoard);
-
-        Scene stageScene = new Scene(grid, 300, 50);
-        stage.setScene(stageScene);
-        stage.show();
+        update(saveBoard);
+        
 
     }
 }

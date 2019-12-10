@@ -1,8 +1,7 @@
 package soundboard.logic;
 
 
-import soundboard.logic.Board;
-import soundboard.logic.SoundPad;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;

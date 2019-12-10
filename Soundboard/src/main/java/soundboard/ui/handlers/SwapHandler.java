@@ -1,4 +1,4 @@
-package soundboard.ui;
+package soundboard.ui.handlers;
 
 import java.util.ArrayList;
 import javafx.event.ActionEvent;
@@ -38,18 +38,14 @@ public class SwapHandler extends AbstractHandler {
             soundBoard.swapSoundPads(x.getId(), swapNumber);
 
             ((Button) root.getChildren().get(Integer.parseInt(swapNumber) + 1))
-                    .setText(soundPadList.get(Integer.parseInt(x.getId())).getSoundPadName());
+                    .setText(swapNumber + ". " + soundPadList.get(Integer.parseInt(x.getId())).getSoundPadName());
 
             ((Button) root.getChildren().get(Integer.parseInt(x.getId()) + 1))
-                    .setText(soundPadList.get(Integer.parseInt(swapNumber)).getSoundPadName());
+                    .setText(x.getId() + ". " + soundPadList.get(Integer.parseInt(swapNumber)).getSoundPadName());
 
             stage.close();
         });
-        grid.getChildren().add(swap);
-
-        Scene stageScene = new Scene(grid, 300, 50);
-        stage.setScene(stageScene);
-        stage.show();
+        update(swap);
 
     }
 }
