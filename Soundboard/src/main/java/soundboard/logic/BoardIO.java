@@ -25,7 +25,7 @@ public class BoardIO {
      * @return New board object created by using a save file.
      */
     public static Board readBoardFromFile(String file) {
-        Board board = new Board();
+        Board board = null;
         try (FileInputStream fileIn = new FileInputStream(file);
                 ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
             board = (Board) objectIn.readObject();

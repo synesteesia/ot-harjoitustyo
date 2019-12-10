@@ -57,11 +57,10 @@ public class Board implements Serializable {
 
         } catch (NumberFormatException e) {
             System.out.print(ERROR_NOT_A_NUMBER);
-            
 
         } catch (IndexOutOfBoundsException ie) {
             System.out.print(INVALID_NUMBER);
-            
+
         }
     }
 
@@ -122,11 +121,10 @@ public class Board implements Serializable {
 
         } catch (NumberFormatException e) {
             System.out.print(ERROR_NOT_A_NUMBER);
-          
 
         } catch (IndexOutOfBoundsException ie) {
             System.out.print(INVALID_NUMBER);
-           
+
         }
     }
 
@@ -145,18 +143,17 @@ public class Board implements Serializable {
 
         } catch (NumberFormatException e) {
             System.out.print(ERROR_NOT_A_NUMBER);
-          
 
         } catch (IndexOutOfBoundsException ie) {
             System.out.print(INVALID_NUMBER);
-          
+
         }
 
     }
 
     /**
-     * Replaces list containing SoundPad objects with a new list read from a load file by
-     * BoardIO.
+     * Replaces list containing SoundPad objects with a new list read from a
+     * load file by BoardIO.
      *
      * @param file Name of the load file, given by user by typing. BoardIO uses
      * it in its constructor.
@@ -164,13 +161,17 @@ public class Board implements Serializable {
     public void loadSavedBoard(String file) {
         Board savedBoard = BoardIO.readBoardFromFile(file);
 
-        this.soundPadList.clear();
-        this.soundPadList.addAll(savedBoard.copyList());
+        if (savedBoard != null) {
+            this.soundPadList.clear();
+            this.soundPadList.addAll(savedBoard.copyList());
+        }
+
     }
 
     /**
-     * Gives Class BoardIO this classes list of SoundPad objects, by converting it to
-     * string using this classes toString method, so it can create a save file
+     * Gives Class BoardIO this classes list of SoundPad objects, by converting
+     * it to string using this classes toString method, so it can create a save
+     * file
      *
      * @param file Name of the save file that is going to be created, given by
      * user.

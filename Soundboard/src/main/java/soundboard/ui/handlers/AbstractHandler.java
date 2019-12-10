@@ -43,6 +43,7 @@ public abstract class AbstractHandler implements EventHandler<ActionEvent> {
         GridPane.setConstraints(userText, 0, 0);
         grid.getChildren().add(userText);
     }
+    
     /**
      * Updates the UI.
      * @param handlerButton Button given by the handler.
