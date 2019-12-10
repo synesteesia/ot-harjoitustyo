@@ -15,7 +15,11 @@ import javafx.scene.layout.Pane;
 import soundboard.logic.Board;
 import soundboard.logic.SoundPad;
 
-
+/**
+ * Class responsible of handling the event of user choosing the Save option of a
+ * SoundPad object in the UI.
+ *
+ */
 public class SaveHandler extends AbstractHandler {
 
 
@@ -28,6 +32,11 @@ public class SaveHandler extends AbstractHandler {
         this.root = root;
     }
 
+        /**
+     * Opens a window asking the user for a save file name and writes it
+     *
+     * @param event Click by user.
+     */
     @Override
     public void handle(ActionEvent event) {
         //window to type in newFile

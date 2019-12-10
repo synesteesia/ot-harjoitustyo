@@ -10,6 +10,11 @@ import javafx.scene.layout.Pane;
 import soundboard.logic.Board;
 import soundboard.logic.SoundPad;
 
+/**
+ * Class responsible of handling the event of user choosing the Clone option of
+ * a SoundPad object in the UI.
+ *
+ */
 public class SwapHandler extends AbstractHandler {
 
     private Board soundBoard;
@@ -21,6 +26,12 @@ public class SwapHandler extends AbstractHandler {
         this.root = root;
     }
 
+    /**
+     * Uses the click of user to identify the SoundPad the user wants to move,
+     * then asks user number of the soundpad to swap places with.
+     *
+     * @param event Click by user.
+     */
     @Override
     public void handle(ActionEvent event) {
         //window to type in swap number

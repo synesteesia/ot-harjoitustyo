@@ -10,6 +10,11 @@ import javafx.scene.layout.Pane;
 import soundboard.logic.Board;
 import soundboard.logic.SoundPad;
 
+/**
+ * Class responsible of handling the event of user choosing the Replace File
+ * option of a SoundPad object in the UI.
+ *
+ */
 public class ReplaceFileHandler extends AbstractHandler {
 
     private Board soundBoard;
@@ -21,6 +26,11 @@ public class ReplaceFileHandler extends AbstractHandler {
         this.root = root;
     }
 
+    /**
+     * Opens a window asking the user for a name of .wav file name and places it on the pad user opened the menu on
+     *
+     * @param event Click by user.
+     */
     @Override
     public void handle(ActionEvent event) {
         //window to type in newFile

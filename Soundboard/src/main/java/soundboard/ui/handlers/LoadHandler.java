@@ -26,6 +26,11 @@ public class LoadHandler extends AbstractHandler {
         this.root = root;
     }
 
+    /**
+     * Opens a window asking the user for a load file name and opens it
+     *
+     * @param event Click by user.
+     */
     @Override
     public void handle(ActionEvent event) {
         //window to type in newFile
