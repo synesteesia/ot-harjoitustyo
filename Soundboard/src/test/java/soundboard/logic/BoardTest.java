@@ -122,7 +122,7 @@ public class BoardTest {
     
     @Test
     public void loadSavedBoardWorks() {
-        testBoard.loadSavedBoard("DefaultSoundBoard");
+        testBoard.loadSavedBoard("StartBoard");
         assertEquals(testBoard.copyList().size(), 9);
     }
 }

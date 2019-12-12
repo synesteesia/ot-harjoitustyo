@@ -11,11 +11,12 @@ import java.io.ObjectOutputStream;
  */
 public class BoardIO {
 
-    public static final String FILENAME = "DefaultSoundBoard";
+    public static final String FILENAME = "StartBoard";
     static final String ERROR_NO_SUCH_FILE = "File not found ";
     static final String ERROR_READING_FILE = "Error reading file ";
     static final String ERROR_SAVING_FILE = "Error saving file ";
     static final String LOAD_SUCCESSFULL = "Soundboard loaded successfully ";
+    static final String BOARDS_PATH = "./src/main/resources/savedBoards/";
 
     /**
      * Creates a new Board object by reading a save file
@@ -26,7 +27,7 @@ public class BoardIO {
      */
     public static Board readBoardFromFile(String file) {
         Board board = null;
-        try (FileInputStream fileIn = new FileInputStream(file);
+        try (FileInputStream fileIn = new FileInputStream(BOARDS_PATH +  file);
                 ObjectInputStream objectIn = new ObjectInputStream(fileIn)) {
             board = (Board) objectIn.readObject();
             System.out.println(LOAD_SUCCESSFULL);
@@ -53,8 +54,9 @@ public class BoardIO {
 
         try {
 
-            FileOutputStream fileOut = new FileOutputStream(file);
+            FileOutputStream fileOut = new FileOutputStream(BOARDS_PATH + file);
             try (ObjectOutputStream objectOut = new ObjectOutputStream(fileOut)) {
+                
                 objectOut.writeObject(board);
             }
 

@@ -1,6 +1,5 @@
 package soundboard.logic;
 
-
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -29,15 +28,15 @@ public class SoundPadTest {
 
     @Test
     public void playSoundWithNoFileWorks() {
-       SoundPad testPadNoFile = new SoundPad("EMPTY", 1);
+        SoundPad testPadNoFile = new SoundPad("EMPTY", 1);
 
         assertTrue(testPadNoFile.playSound());
 
     }
-    
-        @Test
+
+    @Test
     public void playSoundErrorWorks() {
-       SoundPad testPadError = new SoundPad("kissa", 1);
+        SoundPad testPadError = new SoundPad("kissa", 1);
 
         assertFalse(testPadError.playSound());
 

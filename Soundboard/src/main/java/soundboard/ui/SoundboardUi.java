@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import soundboard.logic.Board;
 import soundboard.logic.SoundPad;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.scene.Scene;
@@ -29,6 +30,7 @@ import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.Pane;
 import static javafx.scene.paint.Color.WHITE;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import soundboard.logic.BoardIO;
 
 public class SoundboardUi extends Application {
@@ -68,12 +70,20 @@ public class SoundboardUi extends Application {
 
         primaryStage.show();
 
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent t) {
+                Platform.exit();
+                System.exit(0);
+            }
+        });
+
     }
 
     public ImageView createBackround() {
         //create UI backround picture
         ImageView iv = new ImageView();
-        Image backround = new Image("file:UI.png");
+        Image backround = new Image("file:./src/main/resources/UI/UI.png");
         iv.setImage(backround);
 
         iv.setFitWidth(600);
@@ -87,7 +97,7 @@ public class SoundboardUi extends Application {
         //set click action
         SoundPad newSoundPad = board.createSoundPad("");
 
-        Image buttonImage = new Image("file:UIbutton.png");
+        Image buttonImage = new Image("file:./src/main/resources/UI/UIbutton.png");
 
         ImageView buttonView = new ImageView();
         buttonView.setImage(buttonImage);
@@ -121,7 +131,8 @@ public class SoundboardUi extends Application {
 
         button.setContextMenu(this.getMenu(id));
 
-        button.setOnAction(this.soundPadHandler);
+        // button.setOnAction(this.soundPadHandler);
+        button.setOnMousePressed(this.soundPadHandler);
         return button;
 
     }
@@ -161,8 +172,6 @@ public class SoundboardUi extends Application {
         menu.getItems().addAll(delete, rename, replaceFile, clone, swap, save, load);
         return menu;
     }
-
-
 
     /**
      * @param args the command line arguments
