@@ -36,17 +36,6 @@
     </dependencies>
     <build>
         <finalName>Soundboard</finalName>
-        <resources>
-            <resource>
-                <directory>src/main/resources/UI/</directory>
-            </resource>
-            <resource>
-                <directory>src/main/resources/savedBoards/</directory>
-            </resource>
-            <resource>
-                <directory>src/main/resources/audioFiles/</directory>
-            </resource>
-        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

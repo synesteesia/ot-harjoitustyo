@@ -16,7 +16,7 @@ public class BoardIO {
     static final String ERROR_READING_FILE = "Error reading file ";
     static final String ERROR_SAVING_FILE = "Error saving file ";
     static final String LOAD_SUCCESSFULL = "Soundboard loaded successfully ";
-    static final String BOARDS_PATH = "./src/main/resources/savedBoards/";
+    static final String BOARDS_PATH = "./savedBoards/";
 
     /**
      * Creates a new Board object by reading a save file

@@ -83,7 +83,7 @@ public class SoundboardUi extends Application {
     public ImageView createBackround() {
         //create UI backround picture
         ImageView iv = new ImageView();
-        Image backround = new Image("file:./src/main/resources/UI/UI.png");
+        Image backround = new Image("file:./UI/UI.png");
         iv.setImage(backround);
 
         iv.setFitWidth(600);
@@ -97,7 +97,7 @@ public class SoundboardUi extends Application {
         //set click action
         SoundPad newSoundPad = board.createSoundPad("");
 
-        Image buttonImage = new Image("file:./src/main/resources/UI/UIbutton.png");
+        Image buttonImage = new Image("file:./UI/UIbutton.png");
 
         ImageView buttonView = new ImageView();
         buttonView.setImage(buttonImage);

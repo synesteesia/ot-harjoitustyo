@@ -13,7 +13,7 @@ public class SoundPad implements Serializable, Runnable {
 
     private static final String SOUND_PLAY_ERROR = "Error playing file.";
     private static final String EMPTY_STRING = "EMPTY";
-    private static final String AUDIO_PATH = "./src/main/resources/audioFiles/";
+    private static final String AUDIO_PATH = "./audioFiles/";
     private String fileName;
     private String soundPadName;
     private int soundPadNumber;
