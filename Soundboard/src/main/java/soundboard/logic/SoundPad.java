@@ -9,9 +9,9 @@ import javax.media.Time;
 /**
  * Class responsible of playing specific sound files.
  */
-public class SoundPad implements Serializable, Runnable {
+public class SoundPad extends Thread implements Serializable {
 
-    private static final String SOUND_PLAY_ERROR = "Error playing file.";
+    private static final String SOUND_PLAY_ERROR = "Error playing file: ";
     private static final String EMPTY_STRING = "EMPTY";
     private static final String AUDIO_PATH = "./audioFiles/";
     private String fileName;
@@ -64,31 +64,14 @@ public class SoundPad implements Serializable, Runnable {
             File testForExceptionFile = new File(AUDIO_PATH + this.fileName);
             Player testForExceptionPlayer = Manager.createRealizedPlayer(testForExceptionFile.toURI().toURL());
 
-            Thread threadPad = new Thread(new SoundPad(this.fileName, 0));
+            Thread threadPad = new Thread(new ThreadPad(this.fileName));
             threadPad.start();
             return true;
 
         } catch (Exception e) {
-            System.out.println(SOUND_PLAY_ERROR);
+            System.out.println(SOUND_PLAY_ERROR + this.fileName);
             return false;
         }
-    }
-
-    @Override
-    public void run() {
-        try {
-            File audioFile = new File(AUDIO_PATH + this.fileName);
-            Player threadPlayer = Manager.createRealizedPlayer(audioFile.toURI().toURL());
-            threadPlayer.start();
-            Time timer = threadPlayer.getDuration();
-            Thread.sleep(timer.getNanoseconds() / 1000000);
-            threadPlayer.stop();
-            threadPlayer.close();
-
-        } catch (Exception threadEx) {
-            System.out.println(SOUND_PLAY_ERROR);
-        }
-
     }
 
     @Override
