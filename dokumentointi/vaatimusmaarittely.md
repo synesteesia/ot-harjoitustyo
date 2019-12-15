@@ -7,10 +7,14 @@ Sovelluksen avulla käyttäjä voi aktivoida ääniä klikkaamalla graafista kä
 
 ## Käyttöliittymän tämän hetkinen versio
 
-<img src="https://raw.githubusercontent.com/synesteesia/ot-harjoitustyo/master/dokumentointi/Kuvat/20191106_163624.jpg" width="750">
-
 Ensimmäisessä kuvassa käyttöliittymän perusnäkymä, josta käyttäjä voi aktivoida äänitiedostoja hiiren vasemmalla napilla.
-Toisessa kuvassa esimerkki ikkunasta joka avautuu context menun kautta kun käyttäjä klikkaa käyttöliittymää oikella hiiren napilla.
+
+<https://raw.githubusercontent.com/synesteesia/ot-harjoitustyo/master/dokumentointi/Kuvat/kaytoliittyma.png" width="750">
+
+Toisessa kuvassa esimerkki ikkunasta joka avautuu context menun kautta, joka puolestaa aukeaa kun käyttäjä klikkaa käyttöliittymää oikella hiiren napilla.
+
+<img src="https://raw.githubusercontent.com/synesteesia/ot-harjoitustyo/master/dokumentointi/Kuvat/ikkuna.png" width="750">
+
 
 ## Tämänhetkisen sovelluksen tarjoama toiminnallisuus
 
