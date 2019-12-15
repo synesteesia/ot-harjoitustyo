@@ -45,9 +45,16 @@ Komento
 mvn package
 ```
 
-generoi hakemistoon _target_ suoritettavan jar-tiedoston _Soundboard-1.0-SNAPSHOT.jar_
+generoi hakemistoon _target_ suoritettavan jar-tiedoston _Soundboard.jar_
 Tiedosto toimii joko siirtämällä se hakemistoon _Soundboard_ tai purkamalla sen suoritushakemistoon _Soundboard_ hakemistosta löytyvän _soundBoardFiles.zip_ tiedoston.
 
+### Suoritettavan jarin käynnistäminen
+
+Komento
+
+```
+java -jar Soundboard.jar
+```
 
 ### Checkstyle
 
