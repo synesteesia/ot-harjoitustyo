@@ -1,6 +1,6 @@
 # Soundboard
 
-Sovelluksen avulla käyttäjä voi soittaa haluamiaan .wav äänitiedostoja klikkaamalla nappeja soundboardissa.
+Sovelluksen avulla käyttäjä voi soittaa haluamiaan .wav äänitiedostoja klikkaamalla nappeja soundboardissa. Sovelluksessa on lisätoiminnallisuutta johon käyttäjä pääsee käsiksi context menun kautta. Toiminnallisuuteen kuuluu mm. omien soundboardien tallennus.
 
 ## Dokumentaatio
 

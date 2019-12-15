@@ -20,7 +20,10 @@
 | 9.12. | 2    | testit                              |
 | 9.12  | 1    | release tarkistus                   |
 | 10.12 | 5    | release tarkistus, testit, javadoc  |
-|   |   |                         |
+| 11.12 | 3    | bugien korjailua                    |
+| 11.12 | 3    | bugien korjailua                    |
+| 15.12 | 1    | dokumentaatio                       |
+|  |    |                    |
 
 
-| yht   |  46  |  | 
+| yht   |  50  |  | 

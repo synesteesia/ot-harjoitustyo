@@ -6,7 +6,14 @@ Lataa tiedosto [soundBoardFiles.zip](https://github.com/synesteesia/ot-harjoitus
 
 ## Konfigurointi
 
-Ohjelma olettaa, että sen käynnistyshakemistossa on tietyt .wav äänitiedostot, kaksi .png kuvaa jotka liittyvät käyttöliittymän toimintaan, sekä _DefaultSoundBoard_ tiedosto. Kaikki tarvittavat tiedostot löytyvät _soundBoardFiles.zip_ tiedostosta, jonka voi purkaa ohjelman käynnistyshakemistoon.
+Ohjelma olettaa, että sen käynnistyshakemistossa on kaikki _soundBoardFiles.zip_ sisältämät kansiot, jotka sisältävät .wav tiedostoja, .png kuvia käyttöliittymää varten, sekä valmiiksi tallennetun soundboard tiedoston joka ladataan ohjelman käynnistyessä. 
+
+Jotta .jar tiedosto toimii sen kanssa samasta hakemistosta täytyy siis löytyä seuraavat kansiot:
+
+-audioFiles (sisältää .wav tiedostoja)
+-UI (sisältää .png tiedostoja)
+-savedBoards (sisältää tallennettuja soundboardeja)
+
 
 ## Ohjelman käynnistäminen
 
@@ -49,12 +56,12 @@ _Swap_ toimii saman kaltaisesti kuin _Clone_. Käyttäjältä kysytään minkä 
 
 ## Replace File
 
-Käyttäjä voi lisätä omia .wav muotoisia äänitedostoja ohjelmaan klikkaamalla halutun soundPadin kohdalla hiiren oikeaa nappia ja valitsemalla ilmestyvästä menusta _Replace File_ Sovellus kysyy tiedoston nimeä. Jotta sovellus löytää tiedoston on sen löydyttävä projektin juuresta. Tiedosto korvaa valitussa soundPadissa aiemmin olleen äänitiedoston ja antaa sille myös uudeksi nimeksi uuden tiedoston nimen.
+Käyttäjä voi lisätä omia .wav muotoisia äänitedostoja ohjelmaan klikkaamalla halutun soundPadin kohdalla hiiren oikeaa nappia ja valitsemalla ilmestyvästä menusta _Replace File_ Sovellus kysyy tiedoston nimeä. Jotta sovellus löytää tiedoston on sen löydyttävä projektin juuresta löytyvästä audioFiles kansiosta. Tiedosto korvaa valitussa soundPadissa aiemmin olleen äänitiedoston ja antaa sille myös uudeksi nimeksi uuden tiedoston nimen.
 
 ## Save ja Load
 
 Käyttäjä voi tallentaa soundboardin tiedostoon valitsemalla context menusta kohdan _Save_
-Ohjelma kysyy minkä nimen käyttäjä haluaa tiedostolle ja lisää tiedoston projektin juureen.
+Ohjelma kysyy minkä nimen käyttäjä haluaa tiedostolle ja lisää tiedoston projektin juuresta löytyvään savedBoards kansioon.
 
-Käyttäjä voi avata tallennetun soundboardin valitsemalla context menusta _Load_ ja syöttämällä projektin juuresta löytyvän tiedoston nimen.
+Käyttäjä voi avata tallennetun soundboardin valitsemalla context menusta _Load_ ja syöttämällä projektin savedBoards kansiosta löytyvän tiedoston nimen.
 
