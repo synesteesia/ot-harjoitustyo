@@ -9,7 +9,7 @@ Sovelluksen avulla käyttäjä voi aktivoida ääniä klikkaamalla graafista kä
 
 Ensimmäisessä kuvassa käyttöliittymän perusnäkymä, josta käyttäjä voi aktivoida äänitiedostoja hiiren vasemmalla napilla.
 
-<https://raw.githubusercontent.com/synesteesia/ot-harjoitustyo/master/dokumentointi/Kuvat/kaytoliittyma.png" width="750">
+<img src="https://raw.githubusercontent.com/synesteesia/ot-harjoitustyo/master/dokumentointi/Kuvat/kaytoliittyma.png" width="750">
 
 Toisessa kuvassa esimerkki ikkunasta joka avautuu context menun kautta, joka puolestaa aukeaa kun käyttäjä klikkaa käyttöliittymää oikella hiiren napilla.
 

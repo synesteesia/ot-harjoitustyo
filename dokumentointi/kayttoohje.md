@@ -11,7 +11,9 @@ Ohjelma olettaa, että sen käynnistyshakemistossa on kaikki _soundBoardFiles.zi
 Jotta .jar tiedosto toimii sen kanssa samasta hakemistosta täytyy siis löytyä seuraavat kansiot:
 
 -audioFiles (sisältää .wav tiedostoja)
+
 -UI (sisältää .png tiedostoja)
+
 -savedBoards (sisältää tallennettuja soundboardeja)
 
 
