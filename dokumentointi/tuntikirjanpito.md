@@ -4,9 +4,9 @@
 | :----:|:-----| :-----|
 | 6.11. | 2    | määrittelydokumentti ja orientaatio |
 | 10.10 | 3    | projektin peruslogiikkaa            |
-| 11.11 | 2    | project assets                      |
+| 11.11 | 2    | sovelluksen käyttämät tiedostot     |
 | 13.11 | 3    | maven/javafx troubleshoot           |
-| 13.11 | 2    | perus javafx                        |
+| 13.11 | 2    | javafx opiskelua                    |
 | 20.11.| 4    | UI aloitus                          |
 | 23.11.| 2    | Testit                              |
 | 24.11.| 2    | Dokumentaatio                       |
@@ -20,7 +20,7 @@
 | 9.12. | 2    | testit                              |
 | 9.12  | 1    | release tarkistus                   |
 | 10.12 | 5    | release tarkistus, testit, javadoc  |
-| 11.12 | 3    | bugien korjailua                    |
+| 11.12 | 3    | bugien korjailua, threadPad luokka  |
 | 15.12 | 1    | dokumentaatio                       |
 |  |     |                     |
 |  |    |                    |
