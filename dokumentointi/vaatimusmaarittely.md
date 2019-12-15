@@ -2,7 +2,7 @@
 
 ## Sovelluksen tarkoitus
 
-Sovelluksen avulla käyttäjä voi aktivoida ääniä klikkaamalla graafista käyttöliittymää. Käyttäjä voi lisätä käyttöliittymään omia .wav äänitiedostoja lisäämällä tiedoston projektin juuresta löytyvään audioFiles kansioon ja kirjoittamalla ohjelmaan tiedoston nimen. Sovelluksella on mahdollista avata eri käyttäjien tekemiä ja tallettamia soundboard tiedostoja.
+Sovelluksen avulla käyttäjä voi aktivoida ääniä klikkaamalla graafista käyttöliittymää. Käyttäjä voi lisätä käyttöliittymään omia .wav äänitiedostoja lisäämällä niitä projektin juuresta löytyvään audioFiles kansioon ja kirjoittamalla ohjelmaan tiedoston nimen. Sovelluksella on mahdollista avata eri käyttäjien tekemiä ja tallettamia soundboard tiedostoja.
 
 
 ## Käyttöliittymän tämän hetkinen versio
@@ -36,4 +36,4 @@ Toisessa kuvassa esimerkki ikkunasta joka avautuu context menun kautta, joka puo
 - Eri tyyppisten äänitiedostojen tukeminen.
 - Pikanäppäinten käyttö, mahdollinen MIDI ohjattavuus.
 - Käyttäjän luotava automaatio, esim äänimatriisin avulla.
-
+- Käyttäjä voi määritellä mikä soundboard latautuu sovelluksen käynnistyessä.
