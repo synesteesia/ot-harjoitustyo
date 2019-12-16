@@ -12,6 +12,8 @@ Pakkaus _soundboard.ui_ sisältää JavaFX:llä toteutetun käyttöliittymän ja
 
 <img src="https://raw.githubusercontent.com/synesteesia/ot-harjoitustyo/master/dokumentointi/Kuvat/LuokkaUML.jpg" width="160">
 
+Kuvassa korvattu kaikki handler luokat yhdellä handler luokalla, todellisuudessa niitä on siis useampia.
+
 ## Käyttöliittymä
 
 Käyttöliittymä sisältää kaksi erillistä näkymää
