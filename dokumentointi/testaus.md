@@ -29,7 +29,7 @@ Sovellusta on testattu manuaalisesti kun se on asennettu [käyttöohjeen](https:
 
 ### Toiminnallisuudet
 
-Kaikki [määrittelydokumentin](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md) ja käyttöohjeen listaamat toiminnallisuudet on käyty läpi. Kaikkien toiminnallisuuksien yhteydessä on syötekentät yritetty täyttää myös virheellisillä tiedostojen nimillä tai väärän tyyppisillä tiedostoilla.
+Kaikki [määrittelydokumentin](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md) ja käyttöohjeen listaamat toiminnallisuudet on käyty läpi. Testejä on pyritty tekemään myös tilanteisiin joissa käyttäjä syöttää virheellisiä tiedostojen nimiä tai väärän tyyppisiä tiedostoja sovellukselle.
 
 ## Sovellukseen jääneet laatuongelmat
 
