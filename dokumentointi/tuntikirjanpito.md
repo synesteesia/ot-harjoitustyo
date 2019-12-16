@@ -22,8 +22,8 @@
 | 10.12 | 5    | release tarkistus, testit, javadoc  |
 | 11.12 | 3    | bugien korjailua, threadPad luokka  |
 | 15.12 | 1    | dokumentaatio                       |
-|  |     |                     |
+| 16.12 | 3    | dokumentaatio                       |
 |  |    |                    |
 
 
-| yht   |  50  |  | 
+| yht   |  53  |  | 
