@@ -22,6 +22,8 @@ Sovelluksen avulla käyttäjä voi soittaa haluamiaan .wav äänitiedostoja klik
 
 [Viikko 6](https://github.com/synesteesia/ot-harjoitustyo/releases/tag/Viikko6)
 
+[loppupalautus](https://github.com/synesteesia/ot-harjoitustyo/releases/tag/loppupalautus)
+
 ## Komentorivitoiminnot
 
 ### Testaus

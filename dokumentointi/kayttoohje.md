@@ -1,8 +1,8 @@
 # Käyttöohje
 
-Lataa tiedosto [Soundboard.jar](https://github.com/synesteesia/ot-harjoitustyo/releases/download/Viikko6/Soundboard.jar)
+Lataa tiedosto [Soundboard.jar](https://github.com/synesteesia/ot-harjoitustyo/releases/download/loppupalautus/Soundboard.jar)
 
-Lataa tiedosto [soundBoardFiles.zip](https://github.com/synesteesia/ot-harjoitustyo/releases/download/Viikko6/soundBoardFiles.zip)
+Lataa tiedosto [soundBoardFiles.zip](https://github.com/synesteesia/ot-harjoitustyo/releases/download/loppupalautus/soundboardFiles.zip)
 
 ## Konfigurointi
 
