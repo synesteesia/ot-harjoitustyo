@@ -6,9 +6,8 @@ Ohjelmaa on testattu sekä automatisoiduin yksikkö- ja integraatiotestein JUnit
 
 ### sovelluslogiikka
 
-Automatisoitujen testien ytimen moudostavat sovelluslogiikkaa, eli pakkauksen soundboard.logic luokkia testaavat integraatiotestit [BoardTest](https://github.com/synesteesia/ot-harjoitustyo/blob/master/Soundboard/src/test/java/soundboard/logic/BoardTest.java), [SoundPadTest](https://github.com/synesteesia/ot-harjoitustyo/blob/master/Soundboard/src/test/java/soundboard/logic/SoundPadTest.java) ja [BoardIO](https://github.com/synesteesia/ot-harjoitustyo/blob/master/Soundboard/src/test/java/soundboard/logic/BoardIOTest.java).
+Automatisoitujen testien ytimen moudostavat sovelluslogiikkaa, eli pakkauksen soundboard.logic luokkia testaavat yksikkö- ja integraatiotestit [BoardTest](https://github.com/synesteesia/ot-harjoitustyo/blob/master/Soundboard/src/test/java/soundboard/logic/BoardTest.java), [SoundPadTest](https://github.com/synesteesia/ot-harjoitustyo/blob/master/Soundboard/src/test/java/soundboard/logic/SoundPadTest.java) ja [BoardIO](https://github.com/synesteesia/ot-harjoitustyo/blob/master/Soundboard/src/test/java/soundboard/logic/BoardIOTest.java).
 
-Integraatiotestit....
 
 ### Testauskattavuus
 

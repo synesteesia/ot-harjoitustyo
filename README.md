@@ -4,13 +4,16 @@ Sovelluksen avulla käyttäjä voi soittaa haluamiaan .wav äänitiedostoja klik
 
 ## Dokumentaatio
 
-[kayttoohje.md](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/kayttoohje.md)
+[Käyttöohje](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/kayttoohje.md)
 
-[vaatimusmaarittely.md](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
+[Vaatimusmäärittelydokumentti](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 
-[tuntikirjanpito.md](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
+[Tuntikirjanpito](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 
-[arkkitehtuuri.md](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
+[Arkkitehtuuridokumentti](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
+
+[Testausdokumentti](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/testaus.md)
+
 
 
 ## Releaset
