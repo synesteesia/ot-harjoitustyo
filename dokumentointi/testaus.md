@@ -1,17 +1,19 @@
 # Testausdokumentti
 
-Ohjelmaa on testattu sekä automatisoiduin yksikkö- ja integraatiotestein JUnitilla sekä manuaalisesti tapahtunein järjestelmätason testein.
+Sovelluksen testaukseen on käytetty JUnit testejä sekä manuaalista testausta.
 
 ## Yksikkö- ja integraatiotestaus
 
 ### sovelluslogiikka
 
-Automatisoitujen testien ytimen moudostavat sovelluslogiikkaa, eli pakkauksen soundboard.logic luokkia testaavat yksikkö- ja integraatiotestit [BoardTest](https://github.com/synesteesia/ot-harjoitustyo/blob/master/Soundboard/src/test/java/soundboard/logic/BoardTest.java), [SoundPadTest](https://github.com/synesteesia/ot-harjoitustyo/blob/master/Soundboard/src/test/java/soundboard/logic/SoundPadTest.java) ja [BoardIO](https://github.com/synesteesia/ot-harjoitustyo/blob/master/Soundboard/src/test/java/soundboard/logic/BoardIOTest.java).
+Sovelluksen testiluokat ovat seuraavat:
+
+[BoardTest](https://github.com/synesteesia/ot-harjoitustyo/blob/master/Soundboard/src/test/java/soundboard/logic/BoardTest.java), [SoundPadTest](https://github.com/synesteesia/ot-harjoitustyo/blob/master/Soundboard/src/test/java/soundboard/logic/SoundPadTest.java) ja [BoardIOTest](https://github.com/synesteesia/ot-harjoitustyo/blob/master/Soundboard/src/test/java/soundboard/logic/BoardIOTest.java).
 
 
 ### Testauskattavuus
 
-Käyttöliittymäkerrosta lukuunottamatta sovelluksen testauksen rivikattavuus on 89% ja haarautumakattavuus 83%
+Sovelluksen rivikattavuus on 89% ja haarautumakattavuus 83%. Testeistä on jätetty pois käyttöliittymän rakentavat luokat.
 
 <img src="https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/Kuvat/Jacoco.png">
 
@@ -23,11 +25,11 @@ Sovelluksen järjestelmätestaus on suoritettu manuaalisesti.
 
 ### Asennus ja konfigurointi
 
-Sovellus on haettu ja sitä on testattu [käyttöohjeen](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/kayttoohje.md) kuvaamalla tavalla usealla Linux koneella siten, että sovelluksen käynnistyshakemistossa on ollut käyttöohjeen kuvauksen mukaiset kansiot ja tiedostot.
+Sovellusta on testattu manuaalisesti kun se on asennettu [käyttöohjeen](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/kayttoohje.md) kuvaamalla tavalla kahdella Linux koneella. Testausta ei ole tehty siis tilanteessa, jossa asennus on tehty virheellisesti.
 
 ### Toiminnallisuudet
 
-Kaikki [määrittelydokumentin](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md) ja käyttöohjeen listaamat toiminnallisuudet on käyty läpi. Kaikkien toiminnallisuuksien yhteydessä on syötekentät yritetty täyttää myös virheellisillä arvoilla kuten tiedostojen nimillä joita ei ole olemassa tai väärän tyyppisillä tiedostoilla.
+Kaikki [määrittelydokumentin](https://github.com/synesteesia/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md) ja käyttöohjeen listaamat toiminnallisuudet on käyty läpi. Kaikkien toiminnallisuuksien yhteydessä on syötekentät yritetty täyttää myös virheellisillä tiedostojen nimillä tai väärän tyyppisillä tiedostoilla.
 
 ## Sovellukseen jääneet laatuongelmat
 

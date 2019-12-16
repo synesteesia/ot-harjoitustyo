@@ -7,7 +7,7 @@ import javax.media.Player;
 import javax.media.Time;
 
 /**
- * Class responsible of playing specific sound files.
+ * Class responsible of playing specific sound files and storing names and filepaths.
  */
 public class SoundPad extends Thread implements Serializable {
 
